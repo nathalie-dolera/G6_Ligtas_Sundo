@@ -1,0 +1,113 @@
+body {
+  background: #f8fafc;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.reg-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+.reg-nav {
+  display: flex;
+  gap: 32px;
+  background: #22223b;
+  padding: 18px 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  box-sizing: border-box;
+  min-height: 56px;
+}
+
+.reg-nav a {
+  color: #c9ada7;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.2s;
+}
+
+.reg-nav a.active,
+.reg-nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #4a4e69;
+  padding-bottom: 2px;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 32px 24px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 32px;
+  margin: 0 0 32px 24px;
+}
+
+.dashboard-card {
+  background: #fff;
+  border: 3px solid #cfd2d6;
+  border-radius: 24px;
+  width: 260px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+}
+
+.dashboard-card span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.card-value {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.dashboard-section-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 32px 0 16px 48px;
+}
+
+.dashboard-subcards {
+  display: flex;
+  gap: 32px;
+  margin-left: 48px;
+}
+
+.dashboard-subcard {
+  background: #fff;
+  border: 3px solid #cfd2d6;
+  border-radius: 20px;
+  width: 180px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-top: 18px;
+}
+
+.dashboard-subcard span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,125 @@
+body {
+  background: #f8fafc;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.reg-container {
+  max-width: 600px;
+  margin: 80px auto 40px auto; 
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding-bottom: 32px;
+}
+
+.reg-nav {
+  display: flex;
+  gap: 32px;
+  background: #22223b;
+  padding: 18px 32px;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  box-sizing: border-box;
+  min-height: 56px;
+}
+
+.reg-nav a {
+  color: #c9ada7;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color 0.2s;
+}
+
+.reg-nav a.active,
+.reg-nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #4a4e69;
+  padding-bottom: 2px;
+}
+
+.reg-form-box {
+  padding: 32px;
+}
+
+.reg-form-box h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #22223b;
+}
+
+section {
+  margin-bottom: 28px;
+}
+
+section h2 {
+  font-size: 1.1rem;
+  color: #4a4e69;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  color: #22223b;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 9px 10px;
+  margin-bottom: 14px;
+  border: 1px solid #bfc0c0;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f4f4f4;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+  border: 1.5px solid #4a4e69;
+  outline: none;
+  background: #fff;
+}
+
+.fetcher-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fetcher-row span {
+  width: 18px;
+  color: #4a4e69;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fetcher-row input[type="text"] {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+button[type="submit"] {
+  margin-top: 18px;
+  background: #4a4e69;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #22223b;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student & Fetcher Registration</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <div class="reg-container">
+    <nav class="reg-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="registration.html" class="active">Registration</a>
+      <a href="#">Settings</a>
+</nav>
+    </nav>
+    <div class="reg-form-box">
+      <h1>Register Student & Fetchers</h1>
+      <form>
+        <section>
+          <h2>Student Information</h2>
+          <label for="student-name">Name</label>
+          <input id="student-name" type="text" placeholder="Enter student name" required>
+          <label for="student-grade">Grade/Section</label>
+          <input id="student-grade" type="text" placeholder="Enter grade/section" required>
+        </section>
+        <section>
+          <h2>Fetchers</h2>
+          <div class="fetcher-row">
+            <span>1</span>
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Contact Number" required>
+            <input type="text" placeholder="Relationship" required>
+          </div>
+          <div class="fetcher-row">
+            <span>2</span>
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Contact Number" required>
+            <input type="text" placeholder="Relationship" required>
+          </div>
+          <div class="fetcher-row">
+            <span>3</span>
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Contact Number" required>
+            <input type="text" placeholder="Relationship" required>
+          </div>
+        </section>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
