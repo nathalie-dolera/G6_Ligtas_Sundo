@@ -2,45 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Student & Fetcher Registration</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <div class="reg-container">
-    <nav class="reg-nav">
-        <a href="dashboard.html" class="active">Dashboard</a>
-        <a href="registration.html">Registration</a>
-        <a href="#">Settings</a>
-</nav>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <nav class="main-nav">
+      <div class="nav-left">
+        <a href="#" class="nav-logo"></a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <a href="registration.html" class="nav-link">Registration</a>
+        <a href="#" class="nav-link">Students files</a>
+        <a href="#" class="nav-link">Record</a>
+      </div>
+      <div class="nav-right">
+        <img src="https://i.imgur.com/0y0y0y0.png" alt="Logo" class="user-logo" />
+        <span class="username">Username</span>
+        <span class="dropdown">&#9660;</span>
+      </div>
     </nav>
-    <div class="dashboard-title">Dashboard</div>
-    <div class="dashboard-cards">
-      <div class="dashboard-card">
-        <span>Students</span>
-        <div class="card-value">118</div>
+  </header>
+  <div class="dashboard-container">
+    <div class="dashboard-cards-row">
+      <!-- Student Card -->
+      <div class="dashboard-card-group student-group">
+        <div class="dashboard-card-header">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>Student</span>
+        </div>
+        <div class="dashboard-card-stats">
+          <div class="dashboard-card-stat">
+            <div class="stat-label">Total Students</div>
+            <div class="stat-value">118</div>
+          </div>
+          <div class="dashboard-card-stat">
+            <div class="stat-label">Present</div>
+            <div class="stat-value">118</div>
+          </div>
+          <div class="dashboard-card-stat">
+            <div class="stat-label">Picks-up Made</div>
+            <div class="stat-value">2</div>
+          </div>
+          <div class="dashboard-card-stat">
+            <div class="stat-label">Alerts</div>
+            <div class="stat-value">1</div>
+          </div>
+        </div>
       </div>
-      <div class="dashboard-card">
-        <span>Fetchers</span>
-        <div class="card-value">118</div>
-      </div>
-      <div class="dashboard-card">
-        <span>Pick-Ups</span>
-        <div class="card-value">2</div>
-      </div>
-      <div class="dashboard-card">
-        <span>Alerts</span>
-        <div class="card-value">1</div>
+      <!-- Fetchers Card -->
+      <div class="dashboard-card-group fetcher-group">
+        <div class="dashboard-card-header">
+          <i class="fa-solid fa-people-group"></i>
+          <span>Fetchers</span>
+        </div>
+        <div class="dashboard-card-stats">
+          <div class="dashboard-card-stat">
+            <div class="stat-label">Total Fetchers</div>
+            <div class="stat-value">118</div>
+          </div>
+          <div class="dashboard-card-stat">
+            <div class="stat-label">Active</div>
+            <div class="stat-value">118</div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="dashboard-section-title">Students:</div>
-    <div class="dashboard-subcards">
-      <div class="dashboard-subcard">
-        <span>Total</span>
+    <!-- Recent Activity Table -->
+    <div class="dashboard-activity">
+      <div class="activity-header">
+        <span>Recent Activity</span>
+        <a href="#" class="show-all">show all</a>
       </div>
-      <div class="dashboard-subcard">
-        <span>Present</span>
-      </div>
-      <div class="dashboard-subcard">
-        <span>Fetchers</span>
-      </div>
+      <table class="activity-table">
+        <thead>
+          <tr>
+            <th>NAME</th>
+            <th>GRADE</th>
+            <th>CLASSROOM</th>
+            <th>FETCHERS</th>
+            <th>STATUS</th>
+            <th>TIME</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan, Delacruz</td>
+            <td>2</td>
+            <td>B-101</td>
+            <td>Miriam Delacruz,...</td>
+            <td>Picked-up</td>
+            <td>3:00</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
+</body>
+</html>

@@ -6,47 +6,121 @@
   <link rel="stylesheet" href="registration.css">
 </head>
 <body>
-  <div class="reg-container">
-    <nav class="reg-nav">
-      <a href="dashboard.html">Dashboard</a>
-      <a href="registration.html" class="active">Registration</a>
-      <a href="#">Settings</a>
-</nav>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <nav class="main-nav">
+      <div class="nav-left">
+        <a href="#" class="nav-logo"></a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="registration.html" class="nav-link active">Registration</a>
+        <a href="#" class="nav-link">Students files</a>
+        <a href="#" class="nav-link">Record</a>
+      </div>
+      <div class="nav-right">
+        <img src="https://i.imgur.com/0y0y0y0.png" alt="Logo" class="user-logo" />
+        <span class="username">Username</span>
+        <span class="dropdown">&#9660;</span>
+      </div>
     </nav>
-    <div class="reg-form-box">
-      <h1>Register Student & Fetchers</h1>
-      <form>
-        <section>
-          <h2>Student Information</h2>
-          <label for="student-name">Name</label>
-          <input id="student-name" type="text" placeholder="Enter student name" required>
-          <label for="student-grade">Grade/Section</label>
-          <input id="student-grade" type="text" placeholder="Enter grade/section" required>
-        </section>
-        <section>
-          <h2>Fetchers</h2>
-          <div class="fetcher-row">
-            <span>1</span>
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Contact Number" required>
-            <input type="text" placeholder="Relationship" required>
+  </header>
+
+  <div class="reg-container">
+    <div class="reg-main">
+      <!-- Registration Form -->
+      <div class="reg-form-box">
+        <h1>Create Student and Fetcher IDs</h1>
+        <form id="reg-form">
+          <section class="student-info">
+            <h2>Student Information</h2>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="student-name">Name</label>
+                <input id="student-name" type="text" placeholder="Enter student name" required>
+              </div>
+              <div class="form-col">
+                <label for="student-classroom">Classroom</label>
+                <input id="student-classroom" type="text" placeholder="Enter classroom">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="student-grade">Grade/Section</label>
+                <input id="student-grade" type="text" placeholder="Enter grade/section" required>
+              </div>
+              <div class="form-col">
+                <label for="student-teacher">Teacher</label>
+                <input id="student-teacher" type="text" placeholder="Enter teacher">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-col">
+                <label for="student-photo">Photo</label>
+                <input id="student-photo" type="file" accept="image/*">
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Fetchers</h2>
+            <div class="fetcher-row">
+              <span>1</span>
+              <input type="text" placeholder="Name" class="fetcher-name">
+              <input type="text" placeholder="Contact Number" class="fetcher-contact">
+              <input type="text" placeholder="Relationship to Student" class="fetcher-relation">
+              <input type="file" class="fetcher-photo" accept="image/*">
+            </div>
+            <div class="fetcher-row">
+              <span>2</span>
+              <input type="text" placeholder="Name" class="fetcher-name">
+              <input type="text" placeholder="Contact Number" class="fetcher-contact">
+              <input type="text" placeholder="Relationship to Student" class="fetcher-relation">
+              <input type="file" class="fetcher-photo" accept="image/*">
+            </div>
+            <div class="fetcher-row">
+              <span>3</span>
+              <input type="text" placeholder="Name" class="fetcher-name">
+              <input type="text" placeholder="Contact Number" class="fetcher-contact">
+              <input type="text" placeholder="Relationship to Student" class="fetcher-relation">
+              <input type="file" class="fetcher-photo" accept="image/*">
+            </div>
+          </section>
+          <button type="submit" class="btn-main">Generate ID</button>
+        </form>
+      </div>
+      <!-- Preview Card -->
+      <div class="reg-preview">
+        <div class="id-card">
+          <h2 id="preview-name">STUDENT NAME</h2>
+          <div id="preview-grade">GRADE/SECTION</div>
+          <div class="id-photo">
+            <img src="https://via.placeholder.com/110x110?text=Photo" alt="Student Photo" id="preview-photo">
           </div>
-          <div class="fetcher-row">
-            <span>2</span>
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Contact Number" required>
-            <input type="text" placeholder="Relationship" required>
+          <div class="id-qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=84x84&data=sample" alt="QR Code" id="preview-qr">
           </div>
-          <div class="fetcher-row">
-            <span>3</span>
-            <input type="text" placeholder="Name" required>
-            <input type="text" placeholder="Contact Number" required>
-            <input type="text" placeholder="Relationship" required>
-          </div>
-        </section>
-        <button type="submit">Register</button>
-      </form>
+        </div>
+      </div>
     </div>
   </div>
+  <script>
+    // Live preview logic
+    document.getElementById('student-name').addEventListener('input', function() {
+      document.getElementById('preview-name').textContent = this.value || 'STUDENT NAME';
+    });
+    document.getElementById('student-grade').addEventListener('input', function() {
+      document.getElementById('preview-grade').textContent = this.value || 'GRADE/SECTION';
+    });
+    document.getElementById('student-photo').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          document.getElementById('preview-photo').src = evt.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        document.getElementById('preview-photo').src = "https://via.placeholder.com/110x110?text=Photo";
+      }
+    });
+  </script>
 </body>
 </html>
