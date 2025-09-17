@@ -1,0 +1,23 @@
+{
+  "name": "g6_ligtas_sundo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathalie-dolera/G6_Ligtas_Sundo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathalie-dolera/G6_Ligtas_Sundo/issues"
+  },
+  "homepage": "https://github.com/nathalie-dolera/G6_Ligtas_Sundo#readme",
+  "dependencies": {
+    "firebase-admin": "^13.5.0"
+  }
+}

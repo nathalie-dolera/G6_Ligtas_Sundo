@@ -31,7 +31,7 @@ body {
   border-radius: 4px;
   box-shadow: 0 2px 24px rgba(0,0,0,0.10);
   width: 430px;
-  min-height: 400px;
+  min-height: 395px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -52,6 +52,7 @@ body {
   align-items: center;
   gap: 8px;
 }
+
 
 .login-form {
   display: flex;
@@ -167,6 +168,24 @@ body {
 .login-type-tab:not(.active):hover {
   background: #ffeaea;
   color: #c1121f;
+}
+
+.register-link {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.register-link a {
+  color: #f44350;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.register-link a:hover {
+  color: #c1121f;
+  text-decoration: underline;
 }
 
 .register-link {

@@ -2,52 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ligtas Sundo Login</title>
+  <title>Ligtas Sundo Teacher Registration</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="reg_login.css">
 </head>
 <body>
   <div class="login-bg">
     <div class="login-card">
       <div class="login-card-header">
-        <i class="fa-solid fa-user"></i> SIGN IN
+        <i class="fa-solid fa-user"></i> Register 
       </div>
-      <form class="login-form" id="loginForm">
+      <form class="login-form" id="registerForm">
         <label for="username">Username</label>
         <div class="input-group">
-          <input type="text" id="username"required>
+          <input type="text" id="username" required>
           <span class="input-icon"><i class="fa-solid fa-user"></i></span>
         </div>
-        <label for="password">
-          Password
-          <a href="#" class="forgot-link">Forgot Password?</a>
-        </label>
+        <label for="password">Password</label>
         <div class="input-group">
           <input type="password" id="password" required>
           <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
         </div>
-        <button type="submit" class="login-btn">Sign In</button>
+        <button type="submit" class="login-btn">Register</button>
+        <p class="register-link">
+        Already have an account?
+    <a href="tc_login.html">Signin here</a>
       </form>
-      <div class="login-divider">Choose login type below</div>
-        <div class="login-type-tabs">
-           <a href="index.html" class="login-type-tab active">
-            <i class="fa-solid fa-user-gear"></i> Admin
-            </a>
-            <a href="tc_login.html" class="login-type-tab">
-                <i class="fa-solid fa-user-tie"></i> Teacher
-            </a>
-        </div>
-        </div>
-      </div>
     </div>
   </div>
+
     <div id="particles-js"></div>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
 <script src="firebase-config.js"></script>
 <script type="text/javascript" src="particles.js"></script>
 <script type="text/javascript" src="app.js"></script>
-<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="reg_login.js"></script>
+
 
 
 </body>
