@@ -1,4 +1,4 @@
-// LOGIN FORM
+
 const loginForm = document.getElementById('loginForm');
 if (loginForm) {
   loginForm.addEventListener('submit', function(e) {
@@ -14,10 +14,10 @@ if (loginForm) {
         const role = idTokenResult.claims.role;
 
         if (role === "admin") {
-          // Allow only admins
+          
           window.location.href = "dashboard.html";
         } else {
-          // Not admin → show error
+      
           firebase.auth().signOut();
           alert("Invalid admin account. Access denied.");
         }
@@ -28,16 +28,15 @@ if (loginForm) {
   });
 }
 
-// FORGOT PASSWORD LINK (from index.html)
+
 const forgotPasswordLink = document.getElementById("forgotPassword");
 if (forgotPasswordLink) {
   forgotPasswordLink.addEventListener("click", function(e) {
     e.preventDefault();
-    window.location.href = "forgot_admin.html"; // go to reset page
+    window.location.href = "forgot_admin.html"; 
   });
 }
 
-// FORGOT PASSWORD FORM (forgot_pass.html)
 const forgotForm = document.getElementById('forgotForm');
 if (forgotForm) {
   forgotForm.addEventListener('submit', function(e) {

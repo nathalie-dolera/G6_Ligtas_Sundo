@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const forgotPasswordLink = document.getElementById("forgotPassword");
   const forgotForm = document.getElementById("forgotForm");
 
-  // LOGIN HANDLER
+
   if (loginForm) {
     loginForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           alert("Login successful!");
-          window.location.href = "registration.html"; // Teacher dashboard
+          window.location.href = "registration.html"; 
         })
         .catch((error) => {
           alert(error.message);
@@ -42,15 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // FORGOT PASSWORD LINK (redirect to forgot_pass.html)
+ 
   if (forgotPasswordLink) {
     forgotPasswordLink.addEventListener("click", function (e) {
       e.preventDefault();
-      window.location.href = "forgot_pass.html"; // go to reset page
+      window.location.href = "forgot_pass.html"; 
     });
   }
 
-  // FORGOT PASSWORD PAGE HANDLER
+
   if (forgotForm) {
     forgotForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       firebase.auth().sendPasswordResetEmail(email)
         .then(() => {
           alert("Password reset email sent! Please check your inbox.");
-          window.location.href = "tc_login.html"; // redirect back to login
+          window.location.href = "tc_login.html"; 
         })
         .catch((error) => {
           if (error.code === "auth/invalid-action-code") {
