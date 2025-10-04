@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Ligtas Sundo Login</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -22,10 +23,15 @@
           Password
           <a href="forgot_admin.html" id="forgotPassword" class="forgot-link">Forgot Password?</a>
         </label>
+        
         <div class="input-group">
           <input type="password" id="password" required>
-          <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+          <span class="input-icon" id="togglePassword">
+            <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+          </span>
         </div>
+        
+        
         <button type="submit" class="login-btn">Sign In</button>
       </form>
       <div class="login-divider">Choose login type below</div>

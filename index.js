@@ -61,5 +61,25 @@ if (forgotForm) {
         }
       });
   });
+  
 }
+
+const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("password");
+const eyeIcon = document.getElementById("eyeIcon"); // Only targets the password icon
+
+if (togglePassword && passwordInput && eyeIcon) {
+  togglePassword.addEventListener("click", function () {
+    const isPasswordHidden = passwordInput.type === "password";
+    passwordInput.type = isPasswordHidden ? "text" : "password";
+
+    // Only toggle the correct icon
+    eyeIcon.classList.toggle("fa-eye");
+    eyeIcon.classList.toggle("fa-eye-slash");
+  });
+}
+
+
+
+
 

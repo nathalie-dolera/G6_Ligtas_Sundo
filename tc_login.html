@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Ligtas Sundo Teacher Login</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <link rel="stylesheet" href="tc_login.css">
 </head>
 <body>
@@ -13,7 +15,6 @@
         <i class="fa-solid fa-user"></i> SIGN IN
       </div>
 
-
       <form id="loginForm" class="login-form">
         <label for="username">Username</label>
         <div class="input-group">
@@ -21,13 +22,11 @@
           <span class="input-icon"><i class="fa-solid fa-user"></i></span>
         </div>
 
-        <label for="password">
-          Password
-          <a href="forgot_pass.html" id="forgotPassword" class="forgot-link">Forgot Password?</a>
-        </label>
         <div class="input-group">
           <input type="password" id="password" required>
-          <span class="input-icon"><i class="fa-solid fa-lock"></i></span>
+          <span class="input-icon" id="togglePassword">
+            <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+          </span>
         </div>
 
         <button type="submit" class="login-btn">Sign In</button>
